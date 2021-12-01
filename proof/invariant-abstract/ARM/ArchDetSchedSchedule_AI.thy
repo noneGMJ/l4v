@@ -345,8 +345,6 @@ qed
 
 context Arch begin global_naming ARM
 
-
-
 lemma handle_reserved_irq_trivial[wp]:
   "handle_reserved_irq irq \<lbrace>Q\<rbrace>"
   unfolding handle_reserved_irq_def
