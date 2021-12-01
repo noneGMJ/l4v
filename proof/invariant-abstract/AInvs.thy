@@ -1393,7 +1393,7 @@ lemma reply_unlink_tcb_schact_is_rct_imp_ct_activatable[wp]:
 lemma reschedule_required_schact_is_rct_imp_ct_activatable[wp]:
   "\<lbrace>\<top>\<rbrace> reschedule_required \<lbrace>\<lambda>_ s. schact_is_rct s \<longrightarrow> ct_in_state activatable s\<rbrace>"
   apply (rule_tac Q="\<lambda>_ s. scheduler_action s = choose_new_thread" in hoare_post_imp)
-  apply (clarsimp simp: schact_is_rct_def)
+   apply (clarsimp simp: schact_is_rct_def)
   apply wpsimp
   done
 
